@@ -1,0 +1,110 @@
+<div class="overlay">
+    <img src="./images/General/LOGO_B.png" alt="" width="70px">
+    <h1>Oni.Manius</h1>
+
+</div>
+<div class="body_work">
+    <div class="slider">
+        <!-- slides -->
+        <div class="slider__slides">
+            <div class="slide s--active">
+                <div class="slide__inner">
+                    <div class="slide__content">
+                        <h2 class="slide__heading">Oni Manious</h2>
+                        <p class="slide__text">Start up</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide__inner">
+                    <div class="slide__content">
+                        <h2 class="slide__heading">Python Basic</h2>
+                        <p class="slide__text">Magic!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide__inner">
+                    <div class="slide__content">
+                        <h2 class="slide__heading">Revit Senior</h2>
+                        <p class="slide__text">It looks cool!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slide__inner">
+                    <div class="slide__content">
+                        <h2 class="slide__heading">Support!</h2>
+                        <p class="slide__text">Forget about IE/Edge and FF</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide s--prev">
+                <div class="slide__inner">
+                    <div class="slide__content">
+                        <h2 class="slide__heading">Check my other stuff!</h2>
+                        <p class="slide__text"><a href="" target="_blank">Other demos</a> and
+                            <a href="" target="_blank">Behance</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- slides end -->
+        <div class="slider__control">
+            <div class="slider__control-line"></div>
+            <div class="slider__control-line"></div>
+        </div>
+        <div class="slider__control slider__control--right m--right">
+            <div class="slider__control-line"></div>
+            <div class="slider__control-line"></div>
+        </div>
+    </div>
+
+    <div class="head-about">
+        <div class="col-12">
+            <img src="./images/General/LOGO_B.png" alt="" style="width: 67px;">
+            <hr size="10px" width="100%" color="#333">
+            <p>3D VISUALIZATION &</p>
+            <p>COMPUTATIONAL DESIGN SOLUTION</p>
+        </div>
+    </div>
+    <div class="noidung-work">
+        {{#each product}}
+        <div class="khoianh">
+            <figure>
+                <a href="http://localhost:8000/images/upload/{{img}}" data-fancybox="gallery">
+                    <img src="http://localhost:8000/images/upload/{{img}}">
+                    <div class="hover-effect">
+                        <div class="hover-content">
+                            <h3>{{title}} <em></em></h2>
+                                <p>{{ description }}</p>
+                        </div>
+                    </div>
+                </a>
+
+            </figure>
+        </div>
+        {{/each}}
+
+
+    </div>
+    <!-- ======================End img ========================== -->
+    <div class="footer-info row col-sm-12">
+        <div class="socail col-sm-2">
+            <h5>FOLOW</h5>
+            <a href="">Instagram</a></br>
+            <a href="">Behance</a>
+        </div>
+        <div class="socail col-sm-5">
+            <h5>HOURS</h5>
+            <p>Monday – Friday</p>
+            <p>8:00am – 5:30pm
+            </p>
+            <p>DA NANG 5:30pm</p>
+        </div>
+        <div class="addres col-sm-4">
+            <p>148 - PHAN DANG LUU - HAI CHAU - DANANG - VIET NAM</p>
+            <p>+84 949 482 573 - INFO@ONI.MSTUDIO.COM</p>
+        </div>
+    </div>
