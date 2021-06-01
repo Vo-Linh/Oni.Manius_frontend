@@ -8,7 +8,7 @@ TweenMax.to(".over-play", 6, {
 // ===================Fullpage============
 new fullpage("#fullpage", {
     //options here
-    licenseKey: null,
+    licenseKey: 'YOUR_KEY_HERE',
     autoScrolling: true,
     scrollHorizontally: true
 });
@@ -17,9 +17,9 @@ new fullpage("#fullpage", {
 $('.owl-carousel').owlCarousel({
     loop: true,
     margin: 40,
-    nav: false,
+    // nav: true,
     items: 3,
-    autoplay: true,
+    autoplay:true,
     autoplayTimeout: 3000,
     // responsive:{
     //     0:{
@@ -34,74 +34,6 @@ $('.owl-carousel').owlCarousel({
     // }
 });
 
-// =========================================
-// *
-// *                SLIDER
-// *
-//==========================================
-$(document).ready(function () {
-    for (var i = 1; i <= $('.slider__slide').length; i++) {
-        $('.slider__indicators').append('<div class="slider__indicator" data-slide="' + i + '"></div>')
-    }
-    setTimeout(function () {
-        $('.slider__wrap').addClass('slider__wrap--hacked');
-    }, 2000);
-});
-
-function goToSlide(number) {
-    $('.slider__slide').removeClass('slider__slide--active');
-    $('.slider__slide[data-slide=' + number + ']').addClass('slider__slide--active');
-};
-
-$('.slider__next, .go-to-next').on('click', function () {
-    var currentSlide = Number($('.slider__slide--active').data('slide'));
-    var totalSlides = $('.slider__slide').length;
-    currentSlide++
-    if (currentSlide > totalSlides) {
-        currentSlide = 1;
-    }
-    goToSlide(currentSlide);
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    var controls = document.querySelectorAll(".go-to-next");
-    // console.log(controls)
-    var slides = document.querySelectorAll(".slider__slide");
-    // console.log(slides);
-    auto();
-
-    function auto() {
-        var thoigian = setInterval(function () {
-            var slide = document.querySelector(".slider__slide.slider__slide--active");
-            // console.log(slide);  
-            var vitrislide = 0;
-            for (var i = 0; slide = slide.previousElementSibling; vitrislide++) {}
-            for (var i = 0; i < slides.length; i++) {
-                slides[i].classList.remove('slider__slide--active');
-            }
-            if (vitrislide == slides.length - 1) {
-                slides[0].classList.add('slider__slide--active');
-            } else {
-                slides[vitrislide].nextElementSibling.classList.add('slider__slide--active');
-                // console.log(slide);
-            }
-        }, 3000)
-        // Tu dong chuyen slide
-        for (var i = 0; i < console.length; i++) {
-            // console.log(controls[i])
-            // controls[i].addEventListener('click', function () {
-            //   clearInterval(thoigian);
-            // })
-        }
-        [].slice.call(controls).forEach(function ($el) {
-            $el.addEventListener("click", () => {
-                clearInterval(thoigian);
-            });
-        });
-        // Dung tu dong chuyen slide
-    }
-
-}, false);
 
 
 /****************************************

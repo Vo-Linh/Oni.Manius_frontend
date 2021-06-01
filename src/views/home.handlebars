@@ -6,43 +6,16 @@
 
     <div class="" id="fullpage">
         <div class="section header-index">
-            <div class="slider">
-                <div class="slider__slide slider__slide--active" data-slide="1">
-                    <div class="slider__wrap">
-                        <div class="slider__back"></div>
-                    </div>
-                    <div class="slider__inner">
-                        <div class="slider__content">
-                            <h1>Slide <br> One</h1><a class="go-to-next">next</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider__slide" data-slide="2">
-                    <div class="slider__wrap">
-                        <div class="slider__back"></div>
-                    </div>
-                    <div class="slider__inner">
-                        <div class="slider__content">
-                            <h1>Slide <br> Two</h1><a class="go-to-next">next</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider__slide" data-slide="3">
-                    <div class="slider__wrap">
-                        <div class="slider__back"></div>
-                    </div>
-                    <div class="slider__inner">
-                        <div class="slider__content">
-                            <h1>Slide <br> Three</h1><a class="go-to-next">next</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="slider__indicators"></div>
-            </div><a class="sig" href="" target="_blank">Oni Manious</a>
+            <button disabled="disabled" class="myBtn">
+                <p>EXPLORE</p>
+            </button>
         </div>
-        <div class="section content-home">
+        <div class="section content">
+            <div class="background_content_index">
+                <h5>WORK</h5>
+            </div>
             <div class="img-content">
-                <img src="/images/General/LOGO_B.png" alt="">
+                <img src="./images/General/LOGO_B_Text.png" alt="">
                 <hr size="10px" width="63%" color="#333">
                 <p class="data">ONI.M is a group of young artist and designer who share passion for
                     architectural
@@ -55,7 +28,7 @@
                 {{#each project}}
                 <div class="item">
                     <h4>{{Date}}</h4>
-                    <img src="http://localhost:8000//images/upload/{{img}}" alt="">
+                    <img src="http://onimanius.com:8000//images/upload/{{img}}" alt="">
                     <div class="des-img">
                         <p>{{Description}}</p>
                         <h4>{{Name}}</h4>
@@ -69,33 +42,50 @@
         </div>
         <div class="section infomation">
             <div class="col-sm-12 infomation_about">
-                <div class="col-sm-5">
-                    <p>From our young talented team. </br>
-                        We provide the 3d visual services for projects from different scale ... </p>
+                <div class="col-sm-6">
+                    <p>Oni.Manius is a group of creative artists and designers who share passion
+                        for architectural visualization and computational design. We realize that
+                        the recent world of 3D design is the perfect way to help clients to visualize
+                        their perfected design projects, from commercial scale to private homes.
+                        Being inspired by the world around us, from nature’s organic forms to lifestyle needs of
+                        society, we aim to produce 3D designs that offer you a new
+                        clarity in the way that you can visualize and experience your project.
+                        ( i want something like a intro cover up things that mentioned on “about
+                        page“ or just take the intro from “about page“ . </p>
                     <button class=""><a href="./about.html" style="color: black;">KNOW MORE ABOUT US</a></button>
                 </div>
-                <div class="col-sm-7">
-                    <img src="/images/Home/HOME_TL_W_A03.jpg" alt="">
+                <div class="col-sm-6">
+                    <img src="./images/Home/HOME_TL_A_00.jpg" alt="">
                 </div>
             </div>
             <div class="col-md-12 infomation-home row">
                 <div class="col-md-8">
-                    <div class="col-md-4">
-                        <img class="" src="/images/Home/HOME_TL_W_B01.jpg" alt="">
-                    </div>
-                    <div class="col-md-4">
-                        <img class="" src="/images/Home/HOME_TL_W_B02.jpg" alt="">
-                    </div>
-                    <div class="col-md-4">
-                        <img class="" src="/images/Home/HOME_TL_W_C01.jpg" alt="">
-                    </div>
+                    <img src="./images/Home/HOME_TL_A_01.jpg" alt="">
                 </div>
                 <div class="col-md-4 text_info">
-                    <p>
-                        From our young talented team.</br>
-                        We provide the 3d visual services for projects from </br>
-                        different scale ...
+                    <p>Parametric design</p>
+                    <p>Talking about second sevice : provide parametric design (modeling and visualization if
+                        needed) for building facade , interior special feature
+                        (this is my passion and i hope can make it into actual business ,anyway)
+                        (its home page so something like a teaser will be nicer than to much detail)</p>
+                </div>
+            </div>
+            <div class="footer-info row col-sm-12">
+                <div class="socail col-sm-1">
+                    <h5>FOLOW</h5>
+                    <a href="">Instagram</a></br>
+                    <a href="">Behance</a>
+                </div>
+                <div class="socail col-sm-8">
+                    <h5>HOURS</h5>
+                    <p>Monday – Friday</p>
+                    <p>8:00am – 5:30pm
                     </p>
+                    <p>DA NANG 5:30pm</p>
+                </div>
+                <div class="addres col-sm-3">
+                    <p>148 - PHAN DANG LUU - HAI CHAU - DANANG - VIET NAM</p>
+                    <p>+84 949 482 573 - INFO@ONI.MSTUDIO.COM</p>
                 </div>
             </div>
         </div>

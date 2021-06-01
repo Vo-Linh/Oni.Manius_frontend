@@ -1,5 +1,7 @@
 import { Request, Response } from "express";
 import nodemailer from "nodemailer";
+import bodyPaser from "body-parser";
+import smtpTransport from "nodemailer-smtp-transport"
 
 
 class contactController {
@@ -10,7 +12,7 @@ class contactController {
 
     public async send(req: Request, res: Response) {
         let { your_name, email, message } = req.body;
-        await console.log(req.body);
+        await console.log(req.body.your_name);
 
         let transporter = nodemailer.createTransport({
             host: "smtp.gmail.com",
@@ -18,17 +20,19 @@ class contactController {
             secure: true,
             auth: {
                 user: 'volinh0607@gmail.com',
-                pass: 'tienhoncame'
+                pass: 'maxbnjctjkqrapua'
             }
         });
 
+        let textBody = `From ${req.body.your_name} Email ${req.body.email}`;
+        let htmlBody = `From: ${req.body.your_name}; Email: ${req.body.email}; </br> Message${req.body.message}`;
         let mailOptions = {
-            from: 'volinh0607@gmail.com',
-            to: 'volinh0607@gamil.com',
+            from: 'thuy.js.1710@gmail.com',
+            to: 'thuy.js.1710@gmail.com',
             subject: 'Sending Email using Node.js',
-            your_name: req.body.your_name,
-            email: req.body.email,
-            message: req.body.message,
+            text: textBody,
+            html: htmlBody,
+            
         };
 
         await transporter.sendMail(mailOptions, function (error, info) {
@@ -39,7 +43,7 @@ class contactController {
             }
         });
 
-        res.redirect('/contact/');
+        res.redirect('/contact');
 
     }
 }
