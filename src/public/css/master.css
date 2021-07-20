@@ -116,7 +116,7 @@
      padding-top: -7%;
      /* margin-left:50%; */
      transform: translate(-16%, 40%);
-     font-size: 30em;
+     font-size: 26em;
      font-weight: 700;
      color: #cccccc;
 }
@@ -216,7 +216,7 @@ content button a {
 .silder-img {
      position: relative;
      height: auto;
-     padding: 0px 7px;
+     padding: 0px 5px;
      width: 100%;
      height: 50%;
 }
@@ -231,7 +231,7 @@ content button a {
      margin-bottom: 13px;
      text-decoration: none;
      font-size: 1em;
-     margin-left: 48%;
+     margin-left: 44%;
      border: solid #333 1px;
      padding: 3px 6px;
      text-align: center;
@@ -245,9 +245,9 @@ content button a {
      padding-top: 2em;
 }
 
-.infomation-home {
-     /* margin-bottom: -4em; */
-}
+/* .infomation-home {
+     margin-bottom: -4em; 
+} */
 
 .infomation_about p {
      font-size: 1.0em;
@@ -268,12 +268,13 @@ content button a {
      margin-left: 30px;
      margin-top: 8px;
      padding: 0px 15px 0 15px;
-     font-size: 1.7em;
+     font-size: 1em;
      border: #333 solid 1px;
 }
 
 .infomation-home {
      display: flex;
+     margin-bottom: 4px;
 }
 
 .infomation_about img {
@@ -287,7 +288,7 @@ content button a {
 
 .infomation-home img {
      margin-left: 30px;
-     height: 74%;
+     height: 70%;
      border-radius: 12px;
      box-shadow: 5px 6px 5px #888888;
      width: 96%;
@@ -298,8 +299,8 @@ content button a {
 }
 
 .text_info p {
-     line-height: 1.5;
-     font-size: 1.2em;
+     line-height: 1.4;
+     font-size: 1em;
      font-weight: 500;
      font-family: 'Rubik-Light', sans-serif;
 }
@@ -352,7 +353,7 @@ h4 {
 /* =====================================================================
 =================================Responsive=============================
 ======================================================================= */
-@media only screen and (min-width: 1550px) {
+@media only screen and (min-width: 1440px) {
      .item {
           height: 400px;
      }
@@ -372,8 +373,8 @@ h4 {
      }
 
      .text_info p {
-          font-size: 1.6em;
-          line-height: 1.9em;
+          font-size: 1.4em;
+          line-height: 1.8em;
           font-weight: 500;
           font-family: 'Rubik-Light', sans-serif;
      }
@@ -383,15 +384,18 @@ h4 {
      }
 
      .silder-img {
-          /* margin: 2em 0; */
+          margin: 2em 0;
      }
 
      .background_content_index h5 {
-          transform: translate(-23%, 59%);
+          transform: translate(-16%, 54%);
      }
 
      .infomation-home {
           margin-bottom: -2em;
+     }
+     hr{
+          width: 60%;
      }
 }
 
@@ -406,6 +410,13 @@ h4 {
 
      .footer-info p {
           font-size: 1.3em;
+     }
+
+     .item .des-img {
+          bottom: 30%;
+     }
+     hr{
+          width: 55%;
      }
 }
 

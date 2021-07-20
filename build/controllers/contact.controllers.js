@@ -52,12 +52,12 @@ var contactController = /** @class */ (function () {
     };
     contactController.prototype.send = function (req, res) {
         return __awaiter(this, void 0, void 0, function () {
-            var _a, your_name, email, message, transporter, mailOptions;
+            var _a, your_name, email, message, transporter, textBody, htmlBody, mailOptions;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
                         _a = req.body, your_name = _a.your_name, email = _a.email, message = _a.message;
-                        return [4 /*yield*/, console.log(req.body)];
+                        return [4 /*yield*/, console.log(req.body.your_name)];
                     case 1:
                         _b.sent();
                         transporter = nodemailer_1.default.createTransport({
@@ -66,16 +66,17 @@ var contactController = /** @class */ (function () {
                             secure: true,
                             auth: {
                                 user: 'volinh0607@gmail.com',
-                                pass: 'tienhoncame'
+                                pass: 'maxbnjctjkqrapua'
                             }
                         });
+                        textBody = "From " + req.body.your_name + " Email " + req.body.email;
+                        htmlBody = "From: " + req.body.your_name + "; Email: " + req.body.email + "; </br> Message" + req.body.message;
                         mailOptions = {
-                            from: 'volinh0607@gmail.com',
-                            to: 'volinh0607@gamil.com',
+                            from: 'thuy.js.1710@gmail.com',
+                            to: 'thuy.js.1710@gmail.com',
                             subject: 'Sending Email using Node.js',
-                            your_name: req.body.your_name,
-                            email: req.body.email,
-                            message: req.body.message,
+                            text: textBody,
+                            html: htmlBody,
                         };
                         return [4 /*yield*/, transporter.sendMail(mailOptions, function (error, info) {
                                 if (error) {
@@ -87,7 +88,7 @@ var contactController = /** @class */ (function () {
                             })];
                     case 2:
                         _b.sent();
-                        res.redirect('/contact/');
+                        res.redirect('/contact');
                         return [2 /*return*/];
                 }
             });

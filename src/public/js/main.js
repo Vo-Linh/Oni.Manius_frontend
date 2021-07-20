@@ -1,3 +1,16 @@
+// ===================Fullpage============
+// $.fn.fullpage.destroy("#fullpage");
+$(document).ready(function () {
+  //destroying
+    $('#about').fullpage({
+    //options here
+    autoScrolling: true,
+    scrollHorizontally: true
+  });
+
+});
+
+
 // ==========================================
 // *
 // *                Over play work
@@ -68,9 +81,9 @@ function topFunction() {
 // *
 // ==================================
 
-var x = document.getElementsByClassName("work-flow");
+// var x = document.getElementsByClassName("work-flow");
 
-console.log(x);
+// console.log(x);
 
 
 //======================================== 
@@ -85,7 +98,7 @@ $('.owl-carousel').owlCarousel({
   // nav: true,
   items: 3,
   autoplay: true,
-  autoplayTimeout: 1000,
+  autoplayTimeout: 3000,
   // responsive:{
   //     0:{
   //         items:1
@@ -116,3 +129,16 @@ function toggleAccordion() {
 }
 
 items.forEach(item => item.addEventListener('click', toggleAccordion));
+
+// ============================================
+//          TIME FOOTER
+// ============================================
+
+let currentTime = new Date();
+let hours = currentTime.getHours() + 7;
+let minutes = currentTime.getMinutes();
+if (hours >= 24) {
+  hours = hours - 24;
+}
+
+document.getElementById("time").innerHTML = `DA NANG ${hours}:${minutes}`;

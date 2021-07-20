@@ -91,6 +91,7 @@ nav ul li a {
 }
 
 .icon_footer {
+    margin-top: 2px;
     float: right;
     display: flex;
     list-style: none;
@@ -114,11 +115,11 @@ nav ul li a {
 .footer-info {
     font-size: 10px;
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     border-top: solid #333 1px;
-    margin: 30px 0 35px 0;
+    margin: 23px 0 23px 0;
     /* padding-bottom: 20px; */
-    padding-top: 20px;
+    /* padding-top: 20px; */
 }
 
 
@@ -135,7 +136,9 @@ p {
     font-weight: 100;
 }
 
-.address {
+.addres {
+    padding-top: 11px;
+    text-align: right;
     right: 0;
 }
 
@@ -332,8 +335,8 @@ a :hover {
 }
 
 .img_head_about {
-    /* margin-top: 1em; */
-    height: 72%;
+    margin-top: 1em;
+    height: 73%;
     bottom: 0;
     padding-bottom: 1%;
     width: 100%;
@@ -349,6 +352,7 @@ hr {
 }
 
 .head-about p {
+    font-size: 1.2em;
     font-weight: 500;
 }
 
@@ -433,6 +437,7 @@ hr {
 }
 
 .img_content_why {
+    margin-top: 0.8em;
     width: 98%;
     /* height: 40%; */
     box-shadow: -3px 4px 7px 0px #888888;
@@ -440,7 +445,6 @@ hr {
 
 .content_why h6 {
     padding-top: 0.6em;
-    padding-top: 10px 0;
     font-weight: 600;
     font-family: 'Rubik-Both', sans-serif;
 }
@@ -471,6 +475,10 @@ hr {
     padding-top: 4%;
 }
 
+.team {
+    position: relative;
+}
+
 .core-team {
     bottom: 0;
     height: 50%;
@@ -499,11 +507,16 @@ hr {
     font-size: 14px;
 }
 
-.section {
+#about {
+    scroll-snap-type: y mandatory;
+}
+
+#about section {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     margin: 0;
     padding: 0;
+    scroll-snap-align: start;
 }
 
 .card-about {
@@ -652,7 +665,7 @@ hr {
 }
 
 .service {
-    position: relative;
+    /* position: relative; */
 }
 
 .img_service {
@@ -672,7 +685,8 @@ hr {
 }
 
 .service_about h6 {
-    font-weight: 550;
+    font-size: 1.3em;
+    font-weight: 600;
 }
 
 .service_about img {
@@ -912,9 +926,23 @@ hr {
     cursor: pointer;
 }
 
+.blog_param {
+    margin-bottom: 5px;
+    /* border-bottom: solid 2px #333; */
+}
+
 .blog_param:hover img {
     background-color: rgb(200, 200, 200);
     transform: scale(1.025);
+}
+
+.info_blog {
+    /* margin-bottom: -10px; */
+    border-bottom: solid 2px #333;
+}
+
+.info_blog a {
+    font-weight: 600;
 }
 
 .info-store:hover h5 {
@@ -979,15 +1007,12 @@ blog_param hr {
 @media only screen and (min-width: 1400px) {
 
     .content_why {
-        line-height: 1.5;
-        font-size: 1.3em;
-        padding-top: 22px;
-        padding-left: 55px;
+        font-size: 1.2em;
     }
 
     .content_why h6 {
         padding-top: 0.8em;
-
+        font-size: 1.3em;
     }
 
     .content_service {
@@ -1049,15 +1074,15 @@ blog_param hr {
 
     .content-work-flow p {
         padding-top: 2em;
-        font-size: 1.3em;
+        font-size: 1.4em;
     }
 
     .accordion button .accordion-title {
-        font-size: 1.2em;
+        font-size: 1.4em;
     }
 
     .accordion .accordion-content p {
-        font-size: 1.1em;
+        font-size: 1.2em;
     }
 
     .work-flow img {
@@ -1080,6 +1105,15 @@ blog_param hr {
         font-size: 1.25em;
     }
 
+    .icon_footer {
+        margin-top: 3px;
+
+    }
+
+    .contact_content h5 {
+        font-size: 22px;
+        font-weight: 500;
+    }
 }
 
 @media only screen and (min-width: 1920px) {
@@ -1096,9 +1130,55 @@ blog_param hr {
         padding: 5em 0 0 0;
     }
 
+    .content_why {
+        font-size: 1.2em;
+    }
+
+    .content-work-flow p {
+        padding-top: 2em;
+        font-size: 1.5em;
+    }
+
+    .accordion button .accordion-title {
+        font-size: 1.7em;
+    }
+
+    .accordion .accordion-content p {
+        font-size: 1.5em;
+    }
+
 
 }
 
+@media only screen and (max-width: 768px) {
+    .noidung-work .khoianh {
+        width: 48%;
+        margin: 0 auto
+    }
+
+    .head-about img {
+        width: 180px;
+    }
+
+    .head-about p {
+        font-size: 1em;
+        font-weight: 500;
+    }
+    .noidung-work{
+        padding-left: 2px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .footer-info {
+        height: 20vh;
+        bottom: 16px;
+    }
+    .noidung-work .khoianh {
+        width: 95%;
+        margin: 0 auto
+    }
+}
 
 /* ========================Animation intro============================== */
 .overlay {
