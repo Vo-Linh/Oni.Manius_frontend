@@ -14,6 +14,7 @@ import workRouter from "./routers/work.routes";
 import aboutRouter from "./routers/about.routes";
 import blogRouter from "./routers/blog.routes";
 import contactRouter from "./routers/contact.routes";
+import animationRoutes from "./routers/animation.routes"
 
 let app = express();
 
@@ -35,6 +36,7 @@ app.use('/work', workRouter);
 app.use('/about', aboutRouter);
 app.use('/blog', blogRouter);
 app.use('/contact', contactRouter);
+app.use('/animation', animationRoutes);
 
 
 app.listen(3000, async () => {

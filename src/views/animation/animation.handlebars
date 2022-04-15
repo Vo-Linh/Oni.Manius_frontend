@@ -1,0 +1,41 @@
+    <div class="animation">
+        <!-- Header Animation -->
+        <div class="head-about">
+            <div class="col-12">
+                <img src="./images/General/LOGO_B_Text.png" alt="" style="width: 200px;">
+                <hr size="10px" width="100%" color="#333">
+                <p>3D ANIMATION &</p>
+                <p>VERTUAL REALITY APLICATION</p>
+            </div>
+        </div>
+        <div class="body_animation">
+            {{#each animation}}
+            <div class="video_animation">
+                <iframe
+                    src="{{link}}"
+                    title="" frameborder="1" style="position:absolute;top:0;left:0;width:100%;height:100%;"
+                    allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            {{/each}}
+        </div>
+        <button onclick="topFunction()" id="backtop"><i class="fas fa-arrow-up"></i></button>
+        <div class="footer-info row col-sm-12" style="position: relative; height: 15vh; bottom: 8px">
+            <div class="socail col-sm-1">
+                <h5>FOLOW</h5>
+                <a href="">Instagram</a></br>
+                <a href="">Behance</a>
+            </div>
+            <div class="socail col-sm-7">
+                <h5>HOURS</h5>
+                <p>Monday – Friday</p>
+                <p>8:00am – 5:30pm
+                </p>
+                <p>DA NANG 5:30pm</p>
+            </div>
+            <div class="addres col-sm-4">
+                <p>148 - PHAN DANG LUU - HAI CHAU - DANANG - VIET NAM</p>
+                <p>+84 949 482 573 - INFO@ONI.MSTUDIO.COM</p>
+            </div>
+        </div>
+
+    </div>

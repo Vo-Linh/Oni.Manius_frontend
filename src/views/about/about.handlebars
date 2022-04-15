@@ -91,38 +91,16 @@
                 <div class="col-2"><img src="./images/General/LOGO_B_Text.png" style="width: 45%; float: right;">
                 </div>
             </div>
+            {{#each member}}
             <div class="card col-md-2 card-about">
-                <img class="card-img-top" src="./images/AboutUs/pr_00.jpg" alt="">
+                <img class="card-img-top" src="http://localhost:8000/images/upload/{{img}}" alt="">
                 <div class="card-body">
-                    <h6 class="card-title">THUY TRAN</h6>
-                    <p class="card-text">Founder|</p>
-                    <p class="card-text">3D Artist, specialised in </br> computational design </p>
+                    <h6 class="card-title">{{Name}}</h6>
+                    <p class="card-text">{{Role}}</p>
+                    <p class="card-text">{{Description}}</p>
                 </div>
             </div>
-            <div class="card col-md-2 card-about">
-                <img class="card-img-top" src="./images/AboutUs/pr_01.jpg" alt="">
-                <div class="card-body">
-                    <h6 class="card-title">NHU NGUYEN</h6>
-                    <p class="card-text">Founder|</p>
-                    <p class="card-text">3D Artist, specialised in </br> computational design </p>
-                </div>
-            </div>
-            <div class="card col-md-2 card-about">
-                <img class="card-img-top" src="./images/AboutUs/pr_02.jpg" alt="">
-                <div class="card-body">
-                    <h6 class="card-title">NGUYEN PHAN</h6>
-                    <p class="card-text">Founder|</p>
-                    <p class="card-text">3D Artist, specialised in </br> computational design </p>
-                </div>
-            </div>
-            <div class="card col-md-2 card-about">
-                <img class="card-img-top" src="./images/AboutUs/pr_03.jpg" alt="">
-                <div class="card-body">
-                    <h6 class="card-title">CUONG PHAN</h6>
-                    <p class="card-text">Founder|</p>
-                    <p class="card-text">3D Artist, specialised in </br>computational design </p>
-                </div>
-            </div>
+            {{/each}}
         </div>
     </section>
     <section class="section service">
